@@ -36,7 +36,7 @@ header {
 
     h1 {
         position: relative;
-        left: 10px;
+        left: 20px;
         top: 20px;
     }
 
@@ -86,14 +86,36 @@ main {
     background-color: #042326;
     
 
-    h1 {
+    h1.cassino-h1 {
         text-align: center;
         margin: 20px 0px;
-        font-size: 23px;
+        font-size: 27px;
+        font-style: italic;
         border-top: 1px solid #167070;
         border-bottom: 1px solid #126666;
         padding: 25px;
-        background-color: #0F5959;
+        background-image: url('assets/cassino-main.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        backdrop-filter: blur(20px);
+        box-shadow: 0px 0px 20px rgba(10, 190, 160, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        text-shadow: 2px 1px black;
+    }
+
+    h1.esportes-h1 {
+        text-align: center;
+        margin: 20px 0px;
+        font-size: 27px;
+        font-style: italic;
+        border-top: 1px solid #167070;
+        border-bottom: 1px solid #126666;
+        padding: 25px;
+        background-image: url('assets/esporte-h1.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
         backdrop-filter: blur(20px);
         box-shadow: 0px 0px 20px rgba(10, 190, 160, 0.37);
         border: 1px solid rgba(255, 255, 255, 0.18);
@@ -104,7 +126,7 @@ main {
         ul {
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             list-style-type: none;
             gap: 10px;
             border-bottom: 2px solid #217e7e;
@@ -167,6 +189,8 @@ main {
         flex-direction: column; 
         overflow: hidden;
         mask-image: linear-gradient(to top, transparent, #000000 20% 100%, transparent);
+        justify-content: center;
+        align-items: center;
 
         h3 {
             text-align: center;
@@ -181,6 +205,9 @@ main {
             border-bottom: 10px solid white;
             border-right: 5px solid white;
             border-left: 5px solid white;
+            background-image: url('assets/libet-bg.png');
+            background-size: cover;
+            width: 350px;
             
             li {
                 animation-timing-function: ease;
@@ -241,7 +268,7 @@ main {
 }
 
 #carouselExampleSlidesOnly {
-    width: 430px;
+    width: 380px;
     display: block;
     margin: auto;
 
