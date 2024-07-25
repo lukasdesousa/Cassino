@@ -13,6 +13,35 @@
     }
 }
 
+@keyframes menuAnim {
+    to {
+        
+        left: 0%;
+    }
+    from {
+        left: -100%;
+    }
+
+    10% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes menuClose {
+    to {
+        left: -100%;
+    }
+    from {
+        left: 0%;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -84,12 +113,168 @@ main {
     overflow: hidden;
     color: white;
     background-color: #042326;
+
+    .account {
+        background-image: linear-gradient(to right, #0A3A40, #176363);
+        padding: 1px;
+        text-shadow: 2px 2px black;
+        font-style: italic;
+        font-size: 20px;
+        
+
+
+        p {
+            margin: 13px;
+        }
+    }
+
+    #hide-menu {
+        position: absolute;
+        z-index: 1;
+        background-color: #156a6a;
+        height: 100%;
+        top: 0%;
+        backdrop-filter: blur(20px);
+        box-shadow: 0px 10px 10px rgba(10, 190, 160, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        text-shadow: 2px 2px black;
+        position: fixed;
+        animation: menuAnim 0.3s linear 1;
+        display: none;
+
+        .balance {
+            border: 2px solid rgb(8, 205, 57);
+            padding: 3px;
+            border-radius: 3px;
+            
+        }
+
+        .close-icon {
+            position: absolute;
+            left: 319px;
+            cursor: pointer;
+            padding: 5px;
+            background-color: #0A3A40;
+            border-radius: 0px 5px 5px 0px;
+            transition: 0.4s;
+        }
+
+        .close-icon:hover {
+            background-color: red;
+            transition: 0.4s;
+        }
+
+
+        .profile { 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 5px;
+            border-bottom: 2px solid white;
+
+            span {
+                position: relative;
+                top: 5px;
+                margin-right: 5px;
+                
+            }
+
+            p {
+                margin-left: 19px;
+            }
+
+        .medal-icon {
+            width: 25px;
+            position: relative;
+            bottom: 2px;
+        }
+    }
+        
+
+        h5 {
+            margin-left: 20px;
+        }
+        
+
+        ul { 
+
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 15px;
+            justify-content: flex-start;
+            margin-top: 20px;
+
+            li {
+                border: 2px solid black;
+                width: 200px;
+                padding: 5px;
+                cursor: pointer;
+                transition: 0.2s;
+
+                
+            }
+            li:hover {
+                background-color: #118cf0;
+                transition: 0.2s;
+            }
+        }
+    }
+
+    .newslatter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        border-top: 2px solid white;
+        padding: 10px;
+
+        h4 {
+            font-size: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            input {
+                padding: 5px;
+                outline: none;
+                width: 180px;
+                height: 35px;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+
+            button {
+                padding: 5px;
+                margin-top: 8px;
+                border-radius: 5px;
+                background-color: rgb(247, 218, 0);
+                backdrop-filter: blur(20px);
+                box-shadow: 0px 10px 10px rgba(10, 190, 160, 0.37);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                transition: 0.2s;
+
+            }
+
+            button:hover {
+            transform: scale(1.06);
+            transition: 0.5s;
+
+            }
+        }
+    }
     
 
     h1.cassino-h1 {
         text-align: center;
         margin: 20px 0px;
-        font-size: 27px;
+        font-size: 29px;
         font-style: italic;
         border-top: 1px solid #167070;
         border-bottom: 1px solid #126666;
@@ -101,7 +286,7 @@ main {
         backdrop-filter: blur(20px);
         box-shadow: 0px 0px 20px rgba(10, 190, 160, 0.37);
         border: 1px solid rgba(255, 255, 255, 0.18);
-        text-shadow: 2px 1px black;
+        text-shadow: 2px 2px black;
     }
 
     h1.esportes-h1 {
@@ -119,7 +304,26 @@ main {
         backdrop-filter: blur(20px);
         box-shadow: 0px 0px 20px rgba(10, 190, 160, 0.37);
         border: 1px solid rgba(255, 255, 255, 0.18);
-        text-shadow: 2px 1px black;
+        text-shadow: 2px 2px black;
+    }
+
+    h1.cassino-live {
+        text-align: center;
+        margin: 20px 0px;
+        font-size: 27px;
+        font-style: italic;
+        border-top: 1px solid #167070;
+        border-bottom: 1px solid #126666;
+        padding: 25px;
+        background-image: url('assets/casssino-aovivo-bg.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        backdrop-filter: blur(20px);
+        box-shadow: 0px 0px 20px rgba(10, 190, 160, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        text-shadow: 2px 2px black;
+
     }
 
     .menu-main {
@@ -174,7 +378,7 @@ main {
 
         ul {
             padding: 0;
-            width: 380px;
+            width: 370px;
             height: 200px;
             display: block;
             margin: auto;
@@ -231,6 +435,7 @@ main {
     }
 }
 
+
 #card {
     background-color: black;
     color: white;
@@ -262,13 +467,8 @@ main {
     bottom: 2px;
 }
 
-.cassino-gif {
-    display: block;
-    margin: auto;
-}
-
 #carouselExampleSlidesOnly {
-    width: 380px;
+    width: 410px;
     display: block;
     margin: auto;
 
@@ -277,17 +477,20 @@ main {
     }
 }
 
+
 footer {
     border-top: 2px solid black;
     background-color: #0A3A40;
     color: white;
     font-size: 14px;
+    padding-top: 10px;
 
 
     .adress {
         color: rgba(255, 255, 255, 0.307);
         text-align: justify;
-        font-size: 12px;
+        font-size: 10px;
+        margin: 20px 10px 30px 10px;
     }
 
     .sup {
@@ -304,10 +507,10 @@ footer {
     .licences {
         display: flex;
         flex-direction: row;
-        margin: 50px 110px;
+        margin: 20px 150px;
 
         img {
-            width: 80px;
+            width: 50px;
         }
     }
 
